@@ -1,5 +1,24 @@
 # start-react-native
  一个 RN 脚手架
+
+# 安装 React Native
+
+参考：https://reactnative.dev/
+```bash
+npx react-native@latest init StartReactNative   
+```
+
+# 安装 Antd for RN
+
+参考：https://rn.mobile.ant.design/index-cn
+```bash
+npm install @ant-design/react-native --save
+# 可选：字体和图标
+npm install @ant-design/icons-react-native --save
+```
+
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started

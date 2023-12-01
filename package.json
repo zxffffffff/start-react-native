@@ -10,6 +10,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@ant-design/icons-react-native": "^2.3.2",
+    "@ant-design/react-native": "^5.0.5",
     "react": "18.2.0",
     "react-native": "0.72.7"
   },
