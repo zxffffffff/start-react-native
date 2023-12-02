@@ -1,14 +1,63 @@
 # start-react-native
  一个 RN 脚手架
 
-# 安装 React Native
+# 开发环境
+
+- 需要安装 Node.js 用于本地开发，不同平台还需额外安装步骤
+- 参考：https://reactnative.dev/docs/environment-setup
+
+## macOS
+
+```bash
+brew install node
+brew install watchman # 监视文件变化
+```
+
+## iOS
+
+手动安装 Xcode
+```bash
+brew install ios-deploy
+```
+
+## Android
+
+以下安装 OpenJDK 发行版，也可以手动安装 Java，建议使用 JDK 11 (兼容问题)
+```bash
+brew tap homebrew/cask-versions
+brew install --cask zulu11
+brew info --cask zulu11         # 获取 cask 安装路径，双击安装
+```
+
+手动安装 Android Studio
+```bash
+- Android SDK
+- Android SDK Platform
+- Android Virtual Device
+- Android 13 (Tiramisu)
+- Android SDK Platform 33
+# 添加 ~/.zshrc
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+```
+
+# 创建 React Native 工程
 
 参考：https://reactnative.dev/
 ```bash
-npx react-native@latest init StartReactNative   
+# 检查开发环境
+npx react-native doctor
+
+# verbose 更多信息
+npx react-native@latest init StartReactNative --verbose
+
+# 运行
+npm start   # Metro (将模块转换/转译为目标平台)
+npm run ios # or android
 ```
 
-# 安装 Antd for RN
+# 【可选】安装 Antd for RN
 
 参考：https://rn.mobile.ant.design/index-cn
 ```bash
