@@ -49,8 +49,15 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # 检查开发环境
 npx react-native doctor
 
-# verbose 更多信息
+# 创建
 npx react-native@latest init StartReactNative --verbose
+
+# 初始化 Android
+cd android  # 使用 Android Studio 打开工程，自动安装依赖
+
+# 初始化 iOS
+cd ios      # 使用 Xcode 打开工程，配置开发者name
+pod install # 安装依赖
 
 # 运行
 npm start   # Metro (将模块转换/转译为目标平台)
